@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Colores primarios */
+    --Moderate-violet: rgb(117, 65, 200);
+    --Very-dark-grayish-blue: rgb(72, 85, 106);
+    --Very-dark-blackish-blue: rgb(25, 33, 46);
+    --White: rgb(255, 255, 255);
+
+    /* Color neutral */
+    --Light-gray: rgb(207, 207, 207);
+    --Light-grayish-blue: rgb(236, 242, 248);
+
+    /* tipografia */
+    --font-family: 'Barlow Semi Condensed', sans-serif;
+}
