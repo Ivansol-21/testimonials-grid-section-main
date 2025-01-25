@@ -84,7 +84,7 @@ main {
     gap: 1.25rem;
 }
 .opinion--padding--border {
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 0.5rem;
 }
 .opinion__header--flex {
@@ -94,7 +94,7 @@ main {
 }
 .opinion__avatar--border {
     border-radius: 50%;
-    border: 1px solid var(--White);
+    border: 1px solid var(--Light-gray-Verified-Graduate);
     max-inline-size: 1.875rem;
 }
 .opinion__address--flex {
@@ -105,7 +105,7 @@ main {
     text-decoration: none;
 }
 .opinion__autor--font {
-    font-weight: var(--Weights-Bold);
+    font-weight: var(--Weights-Semi-Bold);
     font-size: 0.813rem;
     letter-spacing: var(--letter-spacing-3);
 }
@@ -116,7 +116,7 @@ main {
     color: var(--Light-gray-Verified-Graduate);
 }
 .opinion__titulo--font {
-    font-weight: var(--Weights-Bold);
+    font-weight: var(--Weights-Semi-Bold);
     font-size: 1.25rem;
     line-height: var(--line-height-1);
     letter-spacing: var(--letter-spacing-2);
@@ -128,6 +128,7 @@ main {
     line-height: var(--line-height-2);
     letter-spacing: var(--letter-spacing-1);
 }
+/* Colores */
 .opinion__Verified--dark-grayish {
     color: var(--Very-dark-grayish-Verified-Graduate);
 }
@@ -139,6 +140,9 @@ main {
 }
 .opinion--text-Light-gray {
     color: var(--Light-gray);
+}
+.opinion--text-white {
+    color: var(--White);
 }
 .opinion--text-grayish-blue {
     color: var(--Very-dark-grayish-blue);
@@ -162,8 +166,7 @@ main {
 .opinion--daniel::before {
     content: url('../images/bg-pattern-quotation.svg');
     position: absolute;
-    top: 0;
-    right: 15%;
-    width: 20%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    top: 1.5%;
+    right: 15.5%;
+    transform: scale(1, 1.1)
 }
