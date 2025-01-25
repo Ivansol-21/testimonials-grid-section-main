@@ -6,11 +6,164 @@
     --Very-dark-grayish-blue: rgb(72, 85, 106);
     --Very-dark-blackish-blue: rgb(25, 33, 46);
     --White: rgb(255, 255, 255);
-
+    
     /* Color neutral */
     --Light-gray: rgb(207, 207, 207);
     --Light-grayish-blue: rgb(236, 242, 248);
+    
+    --Light-gray-Verified-Graduate: rgba(207, 207, 207, 0.5);
+    --Light-gray-Parrafo: rgba(207, 207, 207, 0.7);
+    
+    --Very-dark-grayish-Verified-Graduate: rgba(72, 85, 106, 0.5);
+    --Very-dark-grayish-Verified-Parrafo: rgba(72, 85, 106, 0.7);
 
     /* tipografia */
     --font-family: 'Barlow Semi Condensed', sans-serif;
+
+    --Weights-medium: 500;
+    --Weights-Semi-Bold: 600;
+    --Weights-Bold: 700;
+
+    --line-height-1: 120%;
+    --line-height-2: 135%;
+
+    --letter-spacing-1: 0.1%;
+    --letter-spacing-2: -0.5%;
+    --letter-spacing-3: -1%;
+}
+/* Reset basico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Light-grayish-blue);
+    font-family: var(--font-family);
+    padding: 2.5rem;
+}
+.opinions--grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-areas: 
+    "opinionDaniel opinionDaniel opinionJonathan opinionKira"
+    "opinionJeanette opinionPatrick opinionPatrick opinionKira";
+    max-inline-size: 69.438rem;
+    gap: 1.5rem;
+}
+/* Posicionamiento de las opiniones */
+.opinion--daniel--position {
+    grid-area: opinionDaniel;
+}
+.opinion--jonatha--position {
+    grid-area: opinionJonathan;
+}
+.opinion--jeanette--position {
+    grid-area: opinionJeanette;
+}
+.opinion--patrick--position {
+    grid-area: opinionPatrick;
+}
+.opinion--kira--position {
+    grid-area: opinionKira;
+}
+/* Caracteristicas en comun de la opiniones */
+.opinion--flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.opinion--padding--border {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.opinion__header--flex {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.opinion__avatar--border {
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    max-inline-size: 1.875rem;
+}
+.opinion__address--flex {
+    display: flex;
+    flex-direction: column;   
+}
+.opinion__enlace--decoracion {
+    text-decoration: none;
+}
+.opinion__autor--font {
+    font-weight: var(--Weights-Bold);
+    font-size: 0.813rem;
+    letter-spacing: var(--letter-spacing-3);
+}
+.opinion__Verified--font {
+    font-weight: var(--Weights-medium);
+    font-size: 0.688rem;
+    letter-spacing: 100%;
+    color: var(--Light-gray-Verified-Graduate);
+}
+.opinion__titulo--font {
+    font-weight: var(--Weights-Bold);
+    font-size: 1.25rem;
+    line-height: var(--line-height-1);
+    letter-spacing: var(--letter-spacing-2);
+    z-index: 1;
+}
+.opinion__parrafo--font {
+    font-weight: var(--Weights-medium);
+    font-size: 0.813rem;
+    line-height: var(--line-height-2);
+    letter-spacing: var(--letter-spacing-1);
+}
+.opinion__Verified--dark-grayish {
+    color: var(--Very-dark-grayish-Verified-Graduate);
+}
+.opinion__parrafo--light-gray {
+    color: var(--Light-gray-Parrafo);
+}
+.opinion__parrafo--dark-grayish {
+    color: var(--Very-dark-grayish-Verified-Parrafo);
+}
+.opinion--text-Light-gray {
+    color: var(--Light-gray);
+}
+.opinion--text-grayish-blue {
+    color: var(--Very-dark-grayish-blue);
+}
+/* Caracteristicas individuales */
+.opinion--background--violet {
+    background-color: var(--Moderate-violet);   
+}
+.opinion--background--white {
+    background-color: var(--White);   
+}
+.opinion--background--blackish-blue {
+    background-color: var(--Very-dark-blackish-blue);   
+}
+.opinion--background--grayish-blue {
+    background-color: var(--Very-dark-grayish-blue);   
+}
+.opinion--daniel {
+    position: relative;
+}
+.opinion--daniel::before {
+    content: url('../images/bg-pattern-quotation.svg');
+    position: absolute;
+    top: 0;
+    right: 15%;
+    width: 20%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
