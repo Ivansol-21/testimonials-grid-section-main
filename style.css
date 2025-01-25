@@ -164,7 +164,7 @@ main {
     position: relative;
 }
 .opinion--daniel::before {
-    content: url('../images/bg-pattern-quotation.svg');
+    content: url('./images/bg-pattern-quotation.svg');
     position: absolute;
     top: 1.5%;
     right: 15.5%;
