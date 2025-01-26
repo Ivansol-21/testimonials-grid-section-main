@@ -50,7 +50,7 @@ main {
     min-height: 100vh;
     background-color: var(--Light-grayish-blue);
     font-family: var(--font-family);
-    padding: 2.5rem;
+    padding: 1.5rem;
 }
 .opinions--grid {
     display: grid;
@@ -84,7 +84,7 @@ main {
     gap: 1.25rem;
 }
 .opinion--padding--border {
-    padding: 2rem;
+    padding: 1.25rem 2.1rem;
     border-radius: 0.5rem;
 }
 .opinion__header--flex {
@@ -128,7 +128,7 @@ main {
     line-height: var(--line-height-2);
     letter-spacing: var(--letter-spacing-1);
 }
-/* Colores */
+/* Colores de textos*/
 .opinion__Verified--dark-grayish {
     color: var(--Very-dark-grayish-Verified-Graduate);
 }
@@ -160,13 +160,51 @@ main {
 .opinion--background--grayish-blue {
     background-color: var(--Very-dark-grayish-blue);   
 }
+.opinion__avartar--border-color-patrick {
+    border-color: var(--Moderate-violet);
+}
+.opinion--box-shadow-suave {
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2),
+    5px 6px 6px rgba(0, 0, 0, 0.1);
+}
 .opinion--daniel {
     position: relative;
 }
 .opinion--daniel::before {
     content: url('./images/bg-pattern-quotation.svg');
     position: absolute;
-    top: 1.5%;
+    top: -1px;
     right: 15.5%;
-    transform: scale(1, 1.1)
+    transform: scale(1, 0.97);
+}
+/* Responsividad */
+@media screen  and (max-width: 1024px){
+    .opinions--grid {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-areas: 
+        "opinionDaniel opinionDaniel opinionJonathan"
+        "opinionJeanette opinionPatrick opinionPatrick"
+        "opinionKira opinionKira opinionKira";
+    }
+}
+@media screen  and (max-width: 768px){
+    .opinions--grid {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        grid-template-areas: 
+        "opinionDaniel opinionDaniel"
+        "opinionJonathan opinionJeanette"
+        "opinionPatrick opinionPatrick"
+        "opinionKira opinionKira";
+    }
+}
+@media screen  and (max-width: 425px){
+    .opinions--grid {
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
+        grid-template-areas: 
+        "opinionDaniel"
+        "opinionJonathan"
+        "opinionJeanette"
+        "opinionPatrick"
+        "opinionKira";
+    }
 }
